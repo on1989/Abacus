@@ -1,0 +1,139 @@
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+@mixin transform($x, $y) {
+	-webkit-transform: translate($x, $y);
+	-moz-transform: translate($x, $y);
+	-ms-transform: translate($x, $y);
+	-o-transform: translate($x, $y);
+	transform: translate($x, $y);
+}
+@mixin transition($sec, $animation) {
+	-webkit-transition: all $sec $animation;
+	-moz-transition: all $sec $animation;
+	-ms-transition: all $sec $animation;
+	-o-transition: all $sec $animation;
+	transition: all $sec $animation;
+}
+$white:#fff;
+$black:#000;
+$light-grey:#C4C4C4;
+$grey:#313131;
+$dark-grey:#272727;
+$yellow:#F0BC5E;
+$OpenSans: 'Open Sans', sans-serif;
+footer{
+	background: #282828;
+	padding-top: 60px;
+	margin:auto 0 0  0;
+	.dfr{
+		align-items: center;
+	}
+	.copyright{
+		width: 100%;
+		text-align: center;
+		font-size: 10px;
+		color: $white;
+		margin: 40px 0 25px;
+	}
+	ul{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		&.menu{
+			margin: 0 auto;
+			li{
+				margin: 0 15px;
+			}
+			a{
+				color: $white;
+				font-size: 14px;
+				line-height: 17px;
+				padding: 10px 0;
+				position: relative;
+				&:after{
+					content:'';
+					width: 0;
+					left:50%;
+					bottom: 0;
+					height: 2px;
+					@include transform(-50%,0);
+					@include transition(0.3s ease);
+					background: $white;
+					position: absolute;
+				}
+				&:hover{
+					&:after{
+						width: 100%;
+					}
+				}
+			}
+		}
+		&.soc{
+			li{
+				margin: 0 10px;
+				width: 32px;
+				height: 32px;
+				position: relative;
+				border-radius: 50%;
+				border: 1px solid #989898;
+				color: #989898;
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+				font-size: 15px;
+				a{
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					right: 0;
+					left: 0;
+				}
+			}
+		}
+	}
+	.logo{
+		display: block;
+		img{
+			width: 132px;
+		}
+	}
+
+}
+@media only screen and (max-width: 679px) {
+	footer{
+		.dfr{
+			flex-direction: column;
+		}
+		ul{
+			&.menu{
+				margin: 30px 0;
+				li {
+					margin: 0px 10px;
+				}
+			}
+		}
+	}
+}

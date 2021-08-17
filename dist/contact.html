@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test Pug Page</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css">
+    <!--(if lt IE 9)-->
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--(endif)-->
+  </head>
+  <body class="inner-page">
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dfr"><a class="logo" href="/"><img src="img/logo.svg" alt="Logo"></a>
+            <div class="burger-menu"> <span></span><span></span><span></span></div>
+            <ul class="menu">
+              <li><a href="#">Asurance</a></li>
+              <li><a href="#">Advisory</a></li>
+              <li><a href="#">Taxation</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+            <form class="search">
+              <input type="search">
+              <button class="icon-search dfc"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="map contacts">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <form>
+                <h3>Contact Us</h3>
+                <div class="input label">
+                  <label>Name</label>
+                  <input type="text">
+                </div>
+                <div class="input label">
+                  <label>Email</label>
+                  <input type="text">
+                </div>
+                <div class="input label">
+                  <label>Phone</label>
+                  <input type="text">
+                </div>
+                <div class="input">
+                  <input class="button" type="submit" value="Send Request">
+                </div>
+              </form>
+              <ul>
+                <li><strong>Office Address</strong>143 Willowdale Ave.<br>Suite #100br<br>Toronto, Ontario<br>M2N 4Y5</li>
+                <li><a class="icon-phone" href="tel:416-440-1600">416-440-1600</a><a class="icon-fax" href="fax:416-946-1296">416-946-1296</a></li>
+                <li><strong>Hours of Operation</strong>Monday to Friday<br>9:00 AM – 5:30 PM</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="map" data-lat="43.660412" data-lng="-79.374814"></div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dfr"><a class="logo" href="#"><img src="img/logo-white.svg" alt="#"></a>
+            <ul class="menu">
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+            <ul class="soc">
+              <li class="icon-facebook"><a href="#"></a></li>
+              <li class="icon-linkedin"><a href="#"></a></li>
+              <li class="icon-twitter"><a href="#"></a></li>
+            </ul>
+            <p class="copyright">Copyright Abacus 2019</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/build.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiSqq1pexHGvlSEj3vv8Uu957SZGcIYZg&amp;amp;callback=initMap"></script>
+    <script src="js/map.js"></script>
+  </body>
+</html>

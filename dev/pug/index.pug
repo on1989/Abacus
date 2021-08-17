@@ -1,0 +1,26 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		title Test Pug Page
+		link(href="css/main.css" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet")
+		link(rel="stylesheet", href="https://cdn.plyr.io/3.5.6/plyr.css")
+		//(if lt IE 9)
+		script(src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js")
+		script(src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js")
+		//(endif)
+	body
+		.wrapper
+			include layout/header.pug
+			include layout/content.pug
+			include layout/footer.pug
+
+		script(src="js/build.js")
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiSqq1pexHGvlSEj3vv8Uu957SZGcIYZg&amp;callback=initMap")
+		script(src="js/map.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/html5media/1.1.8/html5media.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.6/plyr.min.js")
+		script(src="js/player.js")
